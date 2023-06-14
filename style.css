@@ -1,3 +1,9 @@
+#menu-content {
+    transition: transform 0.3s ease-in-out;
+    /* Ajoute une transition fluide à la transformation du menu */
+}
+
+
 .content {
     border-color: #04A1AE;
     background: #E9ECEF;
@@ -5,6 +11,7 @@
     margin: 25px 0;
     border-radius: 10px;
 }
+
 
 .col-centered {
     display: flex;
