@@ -10,7 +10,7 @@ function NewWindow() {
         }
     });
 
-    window.loadFile("index.html");
+    window.loadFile("html/index.html");
 }
 
 module.exports = {

@@ -12,15 +12,9 @@ window.addEventListener("load", async () => {
  * 
  */
 async function init() {
-    gotElement("layouts/sidenav-profile.html","sidenav-left")
-    gotElement("layouts/header.html","navbar")
+    gotElement("layouts/header-connect.html","navbar")
     // gotElement("layouts/footer.html","footer")
-    gotElement("layouts/forfait.html","sidenav-right")
-    gotElement("layouts/mode-paiement.html","sidenav-right")
-    gotElement("layouts/consommation.html","sidenav-right")
-    gotElement("layouts/facturations.html","sidenav-right")
-    gotElement("layouts/options.html","sidenav-right")
-    gotElement("layouts/service.html","sidenav-right")
+    gotElement("layouts/form-register.html","sidenav")
     console.log("Elements initialisés");
 }
 
