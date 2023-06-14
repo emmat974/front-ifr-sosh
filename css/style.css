@@ -1,0 +1,26 @@
+.btn {
+    /* padding: 10px 50px; */
+    border-radius: 30px;
+}
+
+.btn-primary {
+    color: white;
+    background: #04A1AE !important;
+    border-color: #04A1AE !important;
+}
+
+
+.btn-primary:hover {
+    background: #03737d !important;
+    border-color: #03737d !important;
+}
+
+.btn-primary:active {
+    background: #02555c !important;
+    border-color: #02555c !important;
+}
+
+.title {
+    color: #04A1AE !important;
+    font-weight: 700;
+}
