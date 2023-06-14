@@ -13,8 +13,8 @@ let horaireData = {};
  * 
  */
 async function init() {
-    gotElement("html/sidenav-profile.html","sidenav")
-
+    gotElement("html/layouts/sidenav-profile.html","sidenav-left")
+    gotElement("html/layouts/header.html","navbar")
     console.log("Elements initialisés");
 }
 

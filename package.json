@@ -1,0 +1,20 @@
+{
+  "name": "front-ifr-sosh",
+  "version": "1.0.0",
+  "description": "Electron initialisation for testing the Sosh roject",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emmat974/front-ifr-sosh.git"
+  },
+  "author": "PAYET Jérémy, Tony EMMA",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/emmat974/front-ifr-sosh/issues"
+  },
+  "homepage": "https://github.com/emmat974/front-ifr-sosh#readme"
+}
