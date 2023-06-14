@@ -21,7 +21,7 @@ async function init() {
     gotElement("html/layouts/consommation.html","sidenav-right")
     gotElement("html/layouts/facturations.html","sidenav-right")
     gotElement("html/layouts/options.html","sidenav-right")
-    gotElement("html/layouts/services.html","sidenav-right")
+    gotElement("html/layouts/service.html","sidenav-right")
     console.log("Elements initialisés");
 }
 
