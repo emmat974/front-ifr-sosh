@@ -79,9 +79,16 @@ const modalProfil = () => {
             modal_titre = document.querySelector("#suppressionLabel");
             modal_body = document.querySelector("#modal-body-content");
             modal_footer = document.querySelector("#modal-footer-content");
-
+            
             modal_titre.innerHTML = `Modifier mon profil`;
             modal_body.innerHTML = text;
+            let profil = getProfile();
+            document.querySelector("#name").innerHTML = profil.firstname;
+            document.querySelector("#surname").innerHTML = profil.lastname;
+            document.querySelector("#adress").innerHTML = profil.address;
+            document.querySelector("#email").innerHTML = profil.email;
+            document.querySelector("#code").innerHTML = profil.code;
+            document.querySelector("#city").innerHTML = profil.city;
             modal_footer.innerHTML = `
             <!-- Submit button -->
             <button type="button" class="btn btn-primary btn-block mb-4">Sauvegarder</button>
@@ -89,3 +96,25 @@ const modalProfil = () => {
                 data-bs-target="#exampleModal">Annuler</button>`
         })
 }
+
+const getProfile = async function()  {
+    try{
+        let config = {
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": "Bearer " + localStorage.getItem("token")
+            },
+        }
+    
+        let profilFetch = await fetch("http://localhost:3000/clients", config)
+    
+        if (profilFetch.ok) {
+            const profil = await profilFetch.json();
+        }
+        return profil;
+    }
+    catch (err) {
+        console.error(err)
+    }
+};
