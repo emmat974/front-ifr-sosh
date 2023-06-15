@@ -2,6 +2,7 @@
     color: #04A1AE !important;
     font-weight: 700;
 }
+
 #menu-content {
     transition: transform 0.3s ease-in-out;
     /* Ajoute une transition fluide à la transformation du menu */
@@ -12,7 +13,7 @@
     border-color: #04A1AE;
     background: #E9ECEF;
     color: #04A1AE;
-    margin: 25px 0;
+    margin: 0 0 25px 0;
     border-radius: 10px;
 }
 
