@@ -31,6 +31,39 @@ const gotElement = (html, element) => {
         })
 }
 
+async function initElement() {
+    try {
+        const config = {
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": "Bearer " + localStorage.getItem("token")
+            },
+        }
+
+        const profilFetch = await fetch("http://localhost:3000/clients", config)
+        const forfaitFetch = await fetch("http://localhost:3000/forfaits", config)
+
+        if (profilFetch.ok) {
+            const profil = await profilFetch.json()
+            document.querySelector("#nameClient").innerHTML = profil.firstname + " " + profil.lastname
+            document.querySelector("#address").innerHTML = profil.address
+        }
+
+        if (forfaitFetch.ok) {
+            const forfait = await forfaitFetch.json()
+            const date = new Date(forfait.createdAt)
+            document.querySelector("#idForfait").innerHTML = forfait.id
+            document.querySelector("#typeForfait").innerHTML = forfait.name
+            document.querySelector("#dateForfait").innerHTML = "Soucris le " + `${("0" + date.getDate()).slice(-2)}/${("0" + (date.getMonth() + 1)).slice(-2)}/${date.getFullYear()}`
+            document.querySelector("#forfaitActive").innerHTML = forfait.isActive ? "Activé" : "Désactiver"
+        }
+
+    } catch (err) {
+        console.error(err)
+    }
+}
+
 const modalProfil = () => {
     let html = "layouts/form-profile.html"
     fetch(html)
