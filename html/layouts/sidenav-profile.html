@@ -1,4 +1,26 @@
 <section style="background-color: #eee;">
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" data-bs-backdrop="static" role="dialog" data-bs-keyboard="false"
+        tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div style="color: black;" class="modal-dialog was-validated" role="document">
+            <div class="modal-content">
+                <div class="border-bottom border-primary modal-header">
+                    <h5 class="modal-title text-primary" id="suppressionLabel"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="modal-body-content">
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div id="modal-footer-content">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="container">
         <div class="row">
             <div>
@@ -15,7 +37,8 @@
                                         <p>Votre profil</p>
                                     </div>
                                     <div class="col-6">
-                                        <button class="btn btn-primary w-100">Modifier</button>
+                                        <button type="button" class="btn btn-primary w-100" data-bs-toggle="modal"
+                                            data-bs-target="#exampleModal" onclick="modalProfil()">Modifier</button>
                                     </div>
                                 </div>
                                 <div class="row float-start">
@@ -51,8 +74,10 @@
                                 Vous avez besoin d'aide?
                             </div>
                             <div class="row">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio repellendus tempora error
-                                ut harum quasi iusto incidunt, fugit nihil asperiores facilis! Et neque veniam rem nam,
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio repellendus tempora
+                                error
+                                ut harum quasi iusto incidunt, fugit nihil asperiores facilis! Et neque veniam rem
+                                nam,
                                 perferendis odit debitis. Aperiam.
                             </div>
                             <div class="row title">
@@ -75,7 +100,8 @@
                                     <button class="btn btn-primary col-auto">Nous contacter</button>
                                 </div>
                                 <div class="row">
-                                    <p class="font-weight-light small">Disponible du lundi au vendredi de 8h à 17h</p>
+                                    <p class="font-weight-light small">Disponible du lundi au vendredi de 8h à 17h
+                                    </p>
                                 </div>
                             </div>
                         </div>

@@ -2,7 +2,6 @@ window.addEventListener("load", async () => {
     init();
 });
 
-
 /**
  * 
  * @apiName init
@@ -70,4 +69,23 @@ async function initElement() {
     } catch (err) {
         console.error(err)
     }
+}
+
+const modalProfil = () => {
+    let html = "layouts/form-profile.html"
+    fetch(html)
+        .then(response => response.text())
+        .then(text => {
+            modal_titre = document.querySelector("#suppressionLabel");
+            modal_body = document.querySelector("#modal-body-content");
+            modal_footer = document.querySelector("#modal-footer-content");
+
+            modal_titre.innerHTML = `Modifier mon profil`;
+            modal_body.innerHTML = text;
+            modal_footer.innerHTML = `
+            <!-- Submit button -->
+            <button type="button" class="btn btn-primary btn-block mb-4">Sauvegarder</button>
+            <button type="button" class="btn btn-secondary btn-block mb-4" data-bs-toggle="modal"
+                data-bs-target="#exampleModal">Annuler</button>`
+        })
 }
