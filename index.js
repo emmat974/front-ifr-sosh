@@ -21,6 +21,9 @@ async function init() {
     gotElement("layouts/options.html", "sidenav-right")
     gotElement("layouts/service.html", "sidenav-right")
     console.log("Elements initialisés");
+    setTimeout(() => {
+        initElement()
+    }, 100)
 }
 
 const gotElement = (html, element) => {
@@ -29,6 +32,10 @@ const gotElement = (html, element) => {
         .then(text => {
             document.querySelector(element).innerHTML += text;
         })
+}
+
+if (!localStorage.getItem("token")) {
+    window.document.location = "./connexion.html"
 }
 
 async function initElement() {

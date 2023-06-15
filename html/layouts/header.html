@@ -14,7 +14,8 @@
                     </li>
                     <li class="nav-item">
                         <span class="nav-link" href="connexion.html">
-                            <button onclick="location.href='connexion.html'" class="btn btn-dark"> Se déconnecter </button>
+                            <button onclick="localStorage.removeItem('token'); location.href='connexion.html'"
+                                class="btn btn-dark"> Se déconnecter </button>
                         </span>
                     </li>
                 </ul>
